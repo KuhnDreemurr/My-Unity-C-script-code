@@ -4,31 +4,81 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Pig : MonoBehaviour {
+    #region 骰子點數圖片1~6
     public Sprite s1;
     public Sprite s2;
     public Sprite s3;
     public Sprite s4;
     public Sprite s5;
     public Sprite s6;
+    #endregion
+    /// <summary>
+    /// 玩家A骰子點數總和暫存
+    /// </summary>
     public int DAp;
+    /// <summary>
+    /// 玩家A實得分數
+    /// </summary>
     public int Ap;
+    /// <summary>
+    /// 玩家B骰子點數總和暫存
+    /// </summary>
     public int DBp;
+    /// <summary>
+    /// 玩家B實得分數
+    /// </summary>
     public int Bp;
+    /// <summary>
+    /// 骰子點數
+    /// </summary>
     public int Dice;
+    /// <summary>
+    /// 玩家A累積分數顯示
+    /// </summary>
     public Text AP;
+    /// <summary>
+    /// 玩家A暫存分數顯示
+    /// </summary>
     public Text ADP;
+    /// <summary>
+    /// 玩家B累積分數顯示
+    /// </summary>
     public Text BP;
+    /// <summary>
+    /// 玩家B暫存分數顯示
+    /// </summary>
     public Text BDP;
+    /// <summary>
+    /// 骰子圖片UI
+    /// </summary>
     public Image DI;
+    /// <summary>
+    /// 擲骰子按鈕
+    /// </summary>
     public Button Play;
+    /// <summary>
+    /// 保留點數按鈕
+    /// </summary>
     public Button Keep;
+    /// <summary>
+    /// 更換玩家回合判定
+    /// </summary>
     public bool player;
+    /// <summary>
+    /// 輸贏判定
+    /// </summary>
     public bool WIN;
+    /// <summary>
+    /// 玩家A獲勝顯示
+    /// </summary>
     public Text WINA;
+    /// <summary>
+    /// 玩家B獲勝顯示
+    /// </summary>
     public Text WINB;
     // Use this for initialization
     void Start() {
-        player = false;
+        player = false; //玩家A先
         WIN = false;
         Dice = 0;
         DI.sprite = null;
